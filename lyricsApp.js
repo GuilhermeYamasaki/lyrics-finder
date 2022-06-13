@@ -9,11 +9,15 @@ form.addEventListener('submit', el => {
 })
 
 async function doSubmit() {
+    const loading = document.querySelector('#loading')
     const lyrics_el = document.querySelector('#lyrics')
     const artist = document.querySelector('#artist')
     const song = document.querySelector('#song')
+    const btnSubmit = document.querySelector('form button[type="submit"]')
 
-    lyrics_el.innerText = '<div class="spinner-grow" role="status"><span class="sr-only">Loading...</span></div>'
+    loading.hidden = false
+    btnSubmit.disabled = true
+    lyrics_el.innerHTML = ''
 
     try {
         const lyricsResponse = await findLyrics(artist.value, song.value)
