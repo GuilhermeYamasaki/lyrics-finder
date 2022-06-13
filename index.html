@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Music finder</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1>Music finder</h1>
+        </div>
+        <div class="row justify-content-center">
+            <form id="lyrics_form">
+                <div class="form-row">
+                    <div class="form_group col-md-6">
+                        <label for="artist">Artist</label>
+                        <input type="text" class="form-control" id="artist" placeholder="Artist" name="artist">
+                    </div>
+                    <div class="form_group col-md-6">
+                        <label for="song">Song</label>
+                        <input type="text" class="form-control" id="song" placeholder="Song" name="song">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <pre class="mt-4" id="lyrics" name="lyrics"></pre>
+    </div>
+
+    <script src="lyricsApp.js"></script>
+</body>
+</html>
